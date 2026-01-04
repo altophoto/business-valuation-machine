@@ -1,10 +1,10 @@
-hi<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Family Groovy Night</title>
+    <title>Business Valuation Machine</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
@@ -1549,13 +1549,13 @@ hi<!DOCTYPE html>
 
         <div v-if="loading" class="loading">
             <div class="loading-spinner"></div>
-            <p>Loading your film collection...</p>
+            <p>Loading your data ...</p>
         </div>
 
         <!-- Navigation -->
         <div v-if="githubToken || currentView === 'settings'" class="nav">
             <button @click="currentView = 'log'" :class="{ active: currentView === 'log' }" :disabled="!githubToken">
-                Film Log
+                Log
             </button>
             <button @click="currentView = 'stats'" :class="{ active: currentView === 'stats' }"
                 :disabled="!githubToken">
@@ -1574,8 +1574,8 @@ hi<!DOCTYPE html>
         <div v-if="currentView === 'log' && githubToken">
             <div class="controls">
                 <div class="control-row">
-                    <input type="text" v-model="searchQuery" placeholder="Search films..." />
-                    <button @click="openAddModal">+ Add Film/Show</button>
+                    <input type="text" v-model="searchQuery" placeholder="Search items..." />
+                    <button @click="openAddModal">+ Add Item</button>
                     <button class="secondary" @click="clearSearch" v-if="searchQuery">Clear</button>
                 </div>
 
@@ -2159,15 +2159,15 @@ hi<!DOCTYPE html>
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    <!--div class="form-group">
                         <label>Year Released</label>
                         <select v-model="filmForm.year" tabindex="6">
                             <option value="">-- Select Year --</option>
                             <option v-for="year in yearOptions" :key="year" :value="year">{{ year }}</option>
                         </select>
-                    </div>
+                     </div-->
 
-                    <!--div class="form-group">
+                    <div class="form-group">
                         <div class="tag-selector" v-if="predefinedDirectors.length > 0">
                             <label class="tag-selector-label">{{ filmForm.type === 'tv' ? 'Creator/Showrunner' :
                                 'Director' }}</label>
@@ -2191,14 +2191,14 @@ hi<!DOCTYPE html>
                         <small>Link to IMDB, Wikipedia, etc.</small>
                     </div>
 
-                    <div class="form-group">
+                    <!--div class="form-group">
                         <label>Duration (minutes) *</label>
                         <input type="number" v-model.number="filmForm.duration" min="1" placeholder="142" required
                             tabindex="10" />
                         <small v-if="filmForm.type === 'tv'">Episode runtime</small>
                     </div-->
 
-                    <div class="form-group">
+                    <!--div class="form-group">
                         <label>Streaming Link</label>
                         <input type="url" v-model="filmForm.platformLink" placeholder="https://..." tabindex="11" />
                         <small>Direct link to watch (Netflix, Amazon, iTunes, etc.)</small>
@@ -2226,15 +2226,15 @@ hi<!DOCTYPE html>
                         <label>Streaming Link 1080p</label>
                         <input type="url" v-model="filmForm.platformLink_1080p" placeholder="https://..." tabindex="15" />
                         <small>Direct link to watch 1080p files</small>
-                    </div>
+                    </div-->
                     
-                    <!--div class="form-group">
-                        <label>Streaming Link Drive</label>
+                    <div class="form-group">
+                        <label>Link Drive</label>
                         <input type="url" v-model="filmForm.platformLink_GoogleDrive" placeholder="https://..." tabindex="16" />
                         <small>Direct link to watch Google Drive files (https://drive.google.com...)</small>
                     </div>
                     
-                    <div class="form-group">
+                    <!--div class="form-group">
                         <label>Streaming Link Tunes</label>
                         <input type="url" v-model="filmForm.platformLink_iTunes" placeholder="https://..." tabindex="17" />
                         <small>Direct link to watch iTunes files</small>
@@ -2284,7 +2284,7 @@ hi<!DOCTYPE html>
         </div>
 
         <!-- TMDb Search Modal -->
-        <div class="modal" v-if="showSearchModal" @click.self="closeSearchModal">
+        <!--div class="modal" v-if="showSearchModal" @click.self="closeSearchModal">
             <div class="modal-content">
                 <h2>Search TMDb</h2>
                 <div class="form-group">
@@ -2314,7 +2314,7 @@ hi<!DOCTYPE html>
                     <button type="button" class="secondary" @click="closeSearchModal">Close</button>
                 </div>
             </div>
-        </div>
+        </div-->
     </div>
     
 </body>
